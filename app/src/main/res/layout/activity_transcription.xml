@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TranscriptionActivity">
+    <!-- android:padding="16dp" -->
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <View
+        android:id="@+id/blackOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/back"
+        app:srcCompat="@drawable/outline_arrow_back_2_24"
+        android:background="@drawable/circle_button_mic" />
+
+    <ImageButton
+        android:id="@+id/signImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/sign_language"
+        app:srcCompat="@drawable/outline_handshake_24"
+        android:background="@drawable/circle_button_mic" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text=""
+            android:visibility="invisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cameraButton"
+        android:layout_above="@+id/micButton"
+        android:layout_margin="16dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text=""
+        android:gravity="top|start"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/micButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/mic_on"
+        app:srcCompat="@drawable/baseline_mic_off_24"
+        android:background="@drawable/circle_button_mic" />
+
+    <ImageButton
+        android:id="@+id/cameraSwitchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/camera_switch"
+        app:srcCompat="@drawable/baseline_cameraswitch_24"
+        android:background="@drawable/circle_button_mic" />
+
+    <ImageButton
+        android:id="@+id/cameraOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle_button_mic"
+        android:contentDescription="@string/camera_switch"
+        app:srcCompat="@drawable/outline_videocam_off_24" />
+
+    <ImageButton
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle_button_mic"
+        android:contentDescription="@string/camera_switch"
+        app:srcCompat="@drawable/outline_videocam_24" />
+
+</RelativeLayout>
